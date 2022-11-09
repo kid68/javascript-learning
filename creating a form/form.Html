@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link real="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input type="file" id="image_input" accept="image/png , image/jpg">
+    <div id="display_image"></div>
+    const image_input = document.query selector("#image_input#");
+    var uploaded_image="" ;
+
+     image_input.addEventListener("change" , function(){
+        const reader=new FileReader();
+        reader.addEventListener("load" , () => {
+             uploaded_image = reader.result;
+             document.querySelector("display_image").style.backgroundImage = 'url'($(uploaded_image))
+
+        })
+        reader.readAsDataURL(this.file[0]);
+
+        
+    })
+
+
+    
+<h1>The input element</h1>
+<script src="form.js"></script>
+<form action="/action_page.php">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label for="username">username:</label>
+    <input type="username" id="username" name="username"><br><br>
+    <label for="email">Email address:</label>
+    <input type="text" id="email" name="email"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <div class="popup" onclick="myFunction()">Click me!
+    <span class="popuptext" id="myPopup">Popup text...</span>
+  </div>
+  
